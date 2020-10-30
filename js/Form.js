@@ -1,32 +1,40 @@
 class Form {
-    constructor() {
-      
-    }
-  
-    display(){
-      var title = createElement('h2')
-      title.html("Car Racing Game");
-      title.position(480, 100);
-      
-      var input = createInput("Name");
-      var button = createButton('Play');
-      
-      input.position(480, 260);
-      button.position(500, 300);
-  
-      button.mousePressed(function(){
-        input.hide();
-        button.hide();
-  
-        var name = input.value();
-        
-        playerCount+=1;
-        player.update(name)
-        player.updateCount(playerCount);
-        var greeting = createElement('h3');
-        greeting.html("Hello " + name )
-        greeting.position(450, 160)
-      });
-  
-    }
+
+  constructor() {
+    this.input = createInput("Name");
+    this.button = createButton('Play');
+    this.greeting = createElement('h2');
+    this.title = createElement('h2');
+    this.reset=createButton('Reset');
   }
+  hide(){
+    this.greeting.hide();
+    this.button.hide();
+    this.input.hide();
+    this.title.hide();
+  }
+
+  display(){
+    this.title.html("Car Racing Game");
+    this.title.position(displayWidth/2 - 50, 0);
+
+    this.input.position(displayWidth/2 - 40 , displayHeight/2 - 80);
+    this.button.position(displayWidth/2 + 30, displayHeight/2);
+    this.reset.position(displayWidth/2-100,500);
+    this.button.mousePressed(()=>{
+      this.input.hide();
+      this.button.hide();
+      player.name = this.input.value();
+      playerCount+=1;
+      player.index = playerCount;
+      player.update();
+      player.updateCount(playerCount);
+      this.greeting.html("Hello " + player.name)
+      this.greeting.position(displayWidth/2 - 70, displayHeight/4);
+    });
+    this.reset.mousePressed(()=>{
+      player.updateCount(0);
+      game.update(0);
+    });
+  }
+}

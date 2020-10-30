@@ -2,34 +2,40 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Zen</title>
+    <title>Multiplayer Game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+
     
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+     
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
 
 
 <script>
-  // Your web app's Firebase configuration
+ 
   var firebaseConfig = {
-    apiKey: "AIzaSyBK_dLYec36-xjBluuLVQSRQ3akRKFEJ6o",
-    authDomain: "car-3-dd5a9.firebaseapp.com",
-    databaseURL: "https://car-3-dd5a9.firebaseio.com",
-    projectId: "car-3-dd5a9",
-    storageBucket: "car-3-dd5a9.appspot.com",
-    messagingSenderId: "799468847196",
-    appId: "1:799468847196:web:f718c613f15a66f1f6e699"
+    apiKey: "AIzaSyAh9lBAMMcV5s0indJlNHk8sFsZqEehowE",
+    authDomain: "car-4-7c816.firebaseapp.com",
+    databaseURL: "https://car-4-7c816.firebaseio.com",
+    projectId: "car-4-7c816",
+    storageBucket: "car-4-7c816.appspot.com",
+    messagingSenderId: "690223380684",
+    appId: "1:690223380684:web:8eb4c42a58ec72fec6aa69"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
-<script src="js/Player.js"></script>
-<script src="js/Form.js"></script>
-<script src="js/Game.js"></script>
+
+    <script src="js/Player.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
